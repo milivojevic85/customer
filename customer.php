@@ -19,6 +19,8 @@ abstract class Customer
 		$this->email = $email;
 		$this->balance = $balance;
 	}
+	
+	abstract public function getEmail();
 }
 
 //$customer = new Customer(1,"Brad Traversy", "brad@gmail.com", 0);
