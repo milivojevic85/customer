@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php 
-class Customer
+abstract class Customer
 {
 	private $id;
 	private $name;
@@ -20,6 +20,8 @@ class Customer
 		$this->balance = $balance;
 	}
 }
+
+$customer = new Customer(1,"Brad Traversy", "brad@gmail.com", 0);
 
 class Subscriber extends Customer
 {
@@ -35,8 +37,8 @@ class Subscriber extends Customer
 	}
 }
 
-$subscriber = new Subscriber(1,"Brad Traversy", "brad@gmail.com", 0, "Pro");
-echo $subscriber->getEmail();
+// $subscriber = new Subscriber(1,"Brad Traversy", "brad@gmail.com", 0, "Pro");
+// echo $subscriber->getEmail();
 ?>
 </body>
 </html>
