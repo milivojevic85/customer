@@ -13,14 +13,18 @@ class Customer
 	public $email;
 	public $balance;
 	
+	public function __construct() {
+		echo "The constructor ran...";
+	}
+	
 	public function getCustomer($id) {
 		$this->id = $id;
 		return "John Doe";
 	}
 }
 
-$customer = new Customer;
-echo $customer->getCustomer(1);
+$customer = new Customer; // The constructor ran...
+
 
 ?>
 </body>
