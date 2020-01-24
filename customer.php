@@ -9,9 +9,9 @@
 class Customer
 {
 	private $id;
-	public $name;
-	public $email;
-	public $balance;
+	private $name;
+	private $email;
+	private $balance;
 	
 	public function __construct($id, $name, $email, $balance) {
 		$this->id = $id;
@@ -19,13 +19,13 @@ class Customer
 		$this->email = $email;
 		$this->balance = $balance;
 	}
-	public function getEmail() {
+	protected function getEmail() {
 		return $this->email;
 	}
 }
 
 $customer = new Customer(1, "Brad Traversy","brad@gmail.com",0);
-echo $customer->getEmail(); // brad@gmail.com
+echo $customer->getEmail(); // Error calling protected method
 
 
 ?>
