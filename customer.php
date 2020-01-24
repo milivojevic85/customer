@@ -21,7 +21,7 @@ abstract class Customer
 	}
 }
 
-$customer = new Customer(1,"Brad Traversy", "brad@gmail.com", 0);
+//$customer = new Customer(1,"Brad Traversy", "brad@gmail.com", 0);
 
 class Subscriber extends Customer
 {
@@ -37,8 +37,8 @@ class Subscriber extends Customer
 	}
 }
 
-// $subscriber = new Subscriber(1,"Brad Traversy", "brad@gmail.com", 0, "Pro");
-// echo $subscriber->getEmail();
+$subscriber = new Subscriber(1,"Brad Traversy", "brad@gmail.com", 0, "Pro");
+echo $subscriber->getEmail(); // brad@gmail.com
 ?>
 </body>
 </html>
