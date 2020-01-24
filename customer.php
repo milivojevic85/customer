@@ -19,11 +19,13 @@ class Customer
 		$this->email = $email;
 		$this->balance = $balance;
 	}
-
+	public function getEmail() {
+		return $this->email;
+	}
 }
 
 $customer = new Customer(1, "Brad Traversy","brad@gmail.com",0);
-echo $customer->name; // Brad Traversy
+echo $customer->getEmail(); // brad@gmail.com
 
 
 ?>
