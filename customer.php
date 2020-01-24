@@ -21,9 +21,14 @@ class Customer
 		$this->id = $id;
 		return "John Doe";
 	}
+	
+	public function __destruct() {
+		echo "The destructor ran...";
+	}
 }
 
-$customer = new Customer; // The constructor ran...
+$customer = new Customer;
+echo $customer->getCustomer(10); // The constructor ran...John Doe The destructor ran...
 
 
 ?>
