@@ -10,7 +10,7 @@ class Customer
 {
 	private $id;
 	private $name;
-	private $email;
+	protected $email;
 	private $balance;
 	
 	public function __construct($id, $name, $email, $balance) {
@@ -19,15 +19,24 @@ class Customer
 		$this->email = $email;
 		$this->balance = $balance;
 	}
-	protected function getEmail() {
+}
+
+class Subscriber extends Customer
+{
+	public $plan;
+	
+	public function __construct($id, $name, $email, $balance, $plan) {
+		parent:: __construct($id, $name, $email, $balance);
+		$this->plan = $plan;
+	}
+	
+	public function getEmail() {
 		return $this->email;
 	}
 }
 
-$customer = new Customer(1, "Brad Traversy","brad@gmail.com",0);
-echo $customer->getEmail(); // Error calling protected method
-
-
+$subscriber = new Subscriber(1,"Brad Traversy", "brad@gmail.com", 0, "Pro");
+echo $subscriber->getEmail();
 ?>
 </body>
 </html>
